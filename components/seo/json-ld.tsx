@@ -1,4 +1,4 @@
-export default function JsonLd() {
+export function JsonLd() {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
