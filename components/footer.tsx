@@ -16,9 +16,9 @@ export default function Footer() {
               Eksperter på fallsikring, arbeid i høyden og redningstjenester. Vi leverer trygge løsninger for industri, bygg og offshore – inkludert redningssett og Actsafe taumopeder.
             </p>
             <div className="flex flex-col gap-2 text-sm">
-              <a href="tel:+4799999999" className="flex items-center gap-2 hover:text-white transition-colors">
+              <a  href="tel:+4733740888" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Phone size={14} className="text-orange-500" />
-                +47 99 99 99 99
+                +47 33 74 08 88
               </a>
               <a href="mailto:finn@abcfallsikring.no" className="flex items-center gap-2 hover:text-white transition-colors">
                 <Mail size={14} className="text-orange-500" />
