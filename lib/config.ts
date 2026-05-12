@@ -1,7 +1,3 @@
-
-Config · TS
-Copy
-
 export const siteConfig = {
   name: "ABC Sikkerhet AS",
   shortName: "ABC Sikkerhet",
