@@ -35,7 +35,6 @@ export function JsonLd() {
       streetAddress: "Korniveien 1",
       addressLocality: "Barkåker",
       postalCode: "3157",
-      addressRegion: "Vestfold",
       addressCountry: "NO",
     },
     openingHoursSpecification: [
@@ -47,25 +46,12 @@ export function JsonLd() {
       },
     ],
     areaServed: { "@type": "Country", name: "Norge" },
-    knowsAbout: [
-      "Fallsikring", "Arbeid i høyden", "Rope Access", "IRATA",
-      "Redningssett", "Umiddelbar redning", "Skylotec", "Petzl",
-      "Actsafe taumopeder", "ACX", "ICX", "PMX", "PME", "ACC",
-    ],
-  }
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "ABC Sikkerhet AS",
-    url: "https://abcfallsikring.no",
   }
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
     </>
   )
 }
@@ -77,92 +63,71 @@ export function FAQJsonLd({ faqs }: { faqs: { question: string; answer: string }
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: faq.answer,
-      },
+      acceptedAnswer: { "@type": "Answer", text: faq.answer },
     })),
   }
-
-  return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-  )
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 }
 
 export function ArticleJsonLd({
   title,
   description,
   publishedAt,
+  publishedTime,
+  modifiedTime,
+  updatedAt,
   slug,
+  url,
+  author,
 }: {
   title: string
   description: string
-  publishedAt: string
-  slug: string
+  publishedAt?: string
+  publishedTime?: string
+  modifiedTime?: string
+  updatedAt?: string
+  slug?: string
+  url?: string
+  author?: string
 }) {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
     description: description,
-    datePublished: publishedAt,
+    datePublished: publishedAt || publishedTime,
+    dateModified: updatedAt || modifiedTime,
     author: {
-      "@type": "Organization",
-      name: "ABC Sikkerhet AS",
-      url: "https://abcfallsikring.no",
+      "@type": "Person",
+      name: author || "ABC Sikkerhet AS",
     },
     publisher: {
       "@type": "Organization",
       name: "ABC Sikkerhet AS",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://abcfallsikring.no/logo.png",
-      },
+      logo: { "@type": "ImageObject", url: "https://abcfallsikring.no/logo.png" },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://abcfallsikring.no/blogg/${slug}`,
+      "@id": url || `https://abcfallsikring.no/blogg/${slug}`,
     },
   }
-
-  return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
-  )
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
 }
 
-export function ServiceJsonLd({
-  name,
-  description,
-  slug,
-}: {
-  name: string
-  description: string
-  slug: string
-}) {
+export function ServiceJsonLd({ name, description, slug }: { name: string; description: string; slug: string }) {
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name: name,
-    description: description,
-    provider: {
-      "@type": "Organization",
-      name: "ABC Sikkerhet AS",
-      url: "https://abcfallsikring.no",
-    },
+    name,
+    description,
+    provider: { "@type": "Organization", name: "ABC Sikkerhet AS", url: "https://abcfallsikring.no" },
     url: `https://abcfallsikring.no/tjenester/${slug}`,
     areaServed: { "@type": "Country", name: "Norge" },
   }
-
-  return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-  )
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 }
 
-export function BreadcrumbJsonLd({
-  items,
-}: {
-  items: { name: string; url: string }[]
-}) {
+export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string }[] }) {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -173,11 +138,5 @@ export function BreadcrumbJsonLd({
       item: item.url,
     })),
   }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-    />
-  )
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 }
