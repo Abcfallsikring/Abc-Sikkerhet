@@ -1,198 +1,197 @@
-import { siteConfig } from '@/lib/config'
-
-interface JsonLdProps {
-  type: 'organization' | 'localBusiness' | 'article' | 'faq' | 'breadcrumb' | 'service'
-  data?: Record<string, unknown>
-}
-
-export function JsonLd({ type, data }: JsonLdProps) {
-  const schemas: Record<string, object> = {
-    organization: {
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: siteConfig.name,
-      url: siteConfig.url,
-      logo: `${siteConfig.url}/logo.png`,
-      description: siteConfig.description,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Industriveien 42',
-        addressLocality: 'Oslo',
-        postalCode: '0579',
-        addressCountry: 'NO',
-      },
-      contactPoint: {
-        '@type': 'ContactPoint',
-        telephone: siteConfig.contact.phone,
-        contactType: 'customer service',
-        availableLanguage: ['Norwegian', 'English'],
-      },
-      sameAs: [
-        siteConfig.social.linkedin,
-        siteConfig.social.facebook,
-        siteConfig.social.instagram,
-      ],
+export default function JsonLd() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "ABC Sikkerhet AS",
+    alternateName: "ABC Fallsikring",
+    url: "https://abcfallsikring.no",
+    logo: "https://abcfallsikring.no/logo.png",
+    description:
+      "ABC Sikkerhet AS er eksperter på fallsikring, arbeid i høyden, rope access og redningstjenester. Autorisert forhandler av Skylotec, Petzl og Actsafe taumopeder (ACX, ICX, PMX, PME, ACC). Godkjente redningssett og sertifiserte kurs over hele Norge.",
+    foundingDate: "2010",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Korniveien 1",
+      addressLocality: "Barkåker",
+      postalCode: "3157",
+      addressCountry: "NO",
     },
-    localBusiness: {
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      '@id': siteConfig.url,
-      name: siteConfig.name,
-      description: siteConfig.description,
-      url: siteConfig.url,
-      telephone: siteConfig.contact.phone,
-      email: siteConfig.contact.email,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Industriveien 42',
-        addressLocality: 'Oslo',
-        postalCode: '0579',
-        addressCountry: 'NO',
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+47-33-74-08-88",
+        contactType: "customer service",
+        email: "finn@abcfallsikring.no",
+        availableLanguage: ["Norwegian"],
       },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 59.9139,
-        longitude: 10.7522,
+    ],
+    sameAs: [
+      "https://www.facebook.com/abcfallsikring",
+      "https://www.linkedin.com/company/abc-fallsikring",
+    ],
+    hasCredential: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "ISO 9001:2015",
+        description: "Kvalitetsledelse",
       },
-      openingHoursSpecification: [
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "ISO 45001:2018",
+        description: "HMS-ledelse",
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "IRATA",
+        description: "Industrial Rope Access Trade Association",
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        name: "SOFT",
+        description: "Skandinavisk organisasjon for fallsikring",
+      },
+    ],
+  }
+
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://abcfallsikring.no/#organization",
+    name: "ABC Sikkerhet AS",
+    image: "https://abcfallsikring.no/logo.png",
+    url: "https://abcfallsikring.no",
+    telephone: "+47-33-74-08-88",
+    email: "finn@abcfallsikring.no",
+    priceRange: "$$",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Korniveien 1",
+      addressLocality: "Barkåker",
+      postalCode: "3157",
+      addressRegion: "Vestfold",
+      addressCountry: "NO",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 59.2833,
+      longitude: 10.3833,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "07:00",
+        closes: "16:00",
+      },
+    ],
+    areaServed: {
+      "@type": "Country",
+      name: "Norge",
+    },
+    knowsAbout: [
+      "Fallsikring",
+      "Arbeid i høyden",
+      "Rope Access",
+      "IRATA",
+      "Redningssett",
+      "Umiddelbar redning",
+      "Skylotec",
+      "Petzl",
+      "Actsafe taumopeder",
+      "ACX",
+      "ICX",
+      "PMX",
+      "PME",
+      "ACC",
+      "Hengetrauma",
+      "HMS",
+      "Kurs fallsikring",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Tjenester",
+      itemListElement: [
         {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-          opens: '07:00',
-          closes: '16:00',
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Fallsikring",
+            description: "Komplette fallsikringssystemer og utstyr for trygg arbeid i høyden.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Rope Access",
+            description: "IRATA-sertifisert rope access for vanskelig tilgjengelige områder.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Redningssett og umiddelbar redning",
+            description:
+              "Godkjente redningssett til byggeplass og arbeid i høyden. Beredskap for umiddelbar redning uten nødetater.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Actsafe taumopeder",
+            description:
+              "Salg, opplæring og sertifisering i Actsafe taumopeder: ACX, ICX, PMX, PME og ACC.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Kurs og opplæring",
+            description:
+              "Sertifiserte kurs innen fallsikring, arbeid i høyden, redning og Actsafe taumopeder.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Inspeksjon",
+            description: "Periodisk kontroll og sertifisering av fallsikringsutstyr.",
+          },
         },
       ],
-      priceRange: '$$',
-      image: `${siteConfig.url}/og-image.jpg`,
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '127',
-      },
     },
-    article: {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      ...(data || {}),
-    },
-    faq: {
-      '@context': 'https://schema.org',
-      '@type': 'FAQPage',
-      mainEntity: data?.questions || [],
-    },
-    breadcrumb: {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: data?.items || [],
-    },
-    service: {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      provider: {
-        '@type': 'Organization',
-        name: siteConfig.name,
-      },
-      ...(data || {}),
+  }
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "ABC Sikkerhet AS",
+    url: "https://abcfallsikring.no",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: "https://abcfallsikring.no/blogg?q={search_term_string}",
+      "query-input": "required name=search_term_string",
     },
   }
 
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas[type]) }}
-    />
-  )
-}
-
-export function ArticleJsonLd({
-  title,
-  description,
-  publishedTime,
-  modifiedTime,
-  author,
-  url,
-  images,
-}: {
-  title: string
-  description: string
-  publishedTime: string
-  modifiedTime?: string
-  author: string
-  url: string
-  images?: string[]
-}) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: title,
-    description: description,
-    author: {
-      '@type': 'Person',
-      name: author,
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: siteConfig.name,
-      logo: {
-        '@type': 'ImageObject',
-        url: `${siteConfig.url}/logo.png`,
-      },
-    },
-    datePublished: publishedTime,
-    dateModified: modifiedTime || publishedTime,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': url,
-    },
-    image: images || [`${siteConfig.url}/og-image.jpg`],
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
-
-export function FAQJsonLd({ questions }: { questions: { question: string; answer: string }[] }) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: questions.map((q) => ({
-      '@type': 'Question',
-      name: q.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: q.answer,
-      },
-    })),
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
-}
-
-export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string }[] }) {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url,
-    })),
-  }
-
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+    </>
   )
 }
