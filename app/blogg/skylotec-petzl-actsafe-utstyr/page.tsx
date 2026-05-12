@@ -197,42 +197,78 @@ export default function ProduktartikkelPage() {
             Actsafe er godkjent som personlig verneutstyr (PVU) og brukes av tårnkranoperatører, vindturbinteknikere, industrielle klatrere, fjellsikringsarbeidere og redningsmannskap over hele verden. ABC Sikkerhet er forhandler og tilbyr opplæring og sertifisering.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+          <div className="space-y-4 mb-8">
             {[
               {
-                name: "Actsafe AS3",
-                cap: "130 kg",
-                speed: "16 m/min",
-                weight: "2,4 kg",
-                desc: "Kompakt og lett taumoped for ett-taus systemer. Ideell for tårnkraner, master og industriell klatring der vekt er kritisk. Drives av batteri.",
-                uses: ["Tårnkraner", "Telemaster", "Fasadearbeid", "Inspeksjon"],
-              },
-              {
-                name: "Actsafe AS6",
+                name: "Actsafe ACX",
+                type: "Elektrisk taumoped – flaggskipet",
                 cap: "250 kg",
                 speed: "18 m/min",
-                weight: "3,8 kg",
-                desc: "Kraftigere modell med høyere kapasitet – kan brukes til å løfte skadet person i tillegg til operatøren. Brukes i vind, offshore og redningsoppdrag.",
-                uses: ["Vindturbiner", "Offshore", "Redning", "Tunge installasjoner"],
+                drive: "Batteri",
+                desc: "ACX er den mest brukte industrielle taumopeden fra Actsafe. Elektrisk drevet, fjernstyrt og kraftig nok til redning av skadet person. Leveres med 2 batterier, fjernkontroll, ladere og solid trillekoffert. Brukes av vindturbinteknikere, industrielle klatrere og redningsmannskap.",
+                uses: ["Vindturbiner", "Master og mast", "Offshore", "Redning", "Fasadearbeid"],
+              },
+              {
+                name: "Actsafe ICX",
+                type: "Kompakt elektrisk taumoped",
+                cap: "130 kg",
+                speed: "16 m/min",
+                drive: "Husqvarna 36V batteri",
+                desc: "ICX er den kompakte og lette varianten, spesielt rettet mot arborister, vinduspussere, fasadevedlikehold og inspeksjonsarbeid. Bruker standard Husqvarna BLi-X 36V batteri – lett å skaffe reservebatterier. Styres med intuitivt tommelhjul. Ca. 230 m oppstigning per lading.",
+                uses: ["Arboristarbeid", "Vindusrengjøring", "Fasadeinspeksjon", "Master"],
+              },
+              {
+                name: "Actsafe PMX",
+                type: "Bensindrevet taumoped – maksimal kraft",
+                cap: "250 kg",
+                speed: "17 m/min",
+                drive: "Bensin",
+                desc: "PMX er bensindrevet og gir ubegrenset rekkevidde – ideell for svært dype sjakter, høye master eller steder uten strømtilgang. Rekkevidde 700–750 m per tank. Robust design tåler støv, skitt og røff behandling. Lukkede taulåssystem holder tauet på plass selv i skitne forhold.",
+                uses: ["Dype sjakter", "Lange oppdrag", "Ingen strøm tilgjengelig", "Offshore"],
+              },
+              {
+                name: "Actsafe PME",
+                type: "Bensindrevet – lett og portabel",
+                cap: "200 kg",
+                speed: "15 m/min",
+                drive: "Bensin",
+                desc: "PME er den lettere bensindrevne modellen, velegnet for telekom, linjemontører og vindkraftarbeidere som trenger lang rekkevidde uten å bære tungt utstyr. Brukes ofte i kombinasjon med ACC-klatrehjelp.",
+                uses: ["Telekom", "Linjemontasje", "Vindkraft", "Inspeksjon"],
+              },
+              {
+                name: "Actsafe ACC",
+                type: "Klatrehjelp / assistert klatring",
+                cap: "–",
+                speed: "–",
+                drive: "Manuell assistanse",
+                desc: "ACC er ikke en selvstendig taumoped, men et system for assistert klatring som brukes sammen med PME. Gjør manuell klatring i tau langt mindre anstrengende og er godkjent som personlig verneutstyr (PVU). Brukes mye i telekombransjen.",
+                uses: ["Telekom", "Linjemontasje", "Kombineres med PME"],
               },
             ].map((m) => (
               <div key={m.name} className="bg-zinc-900 text-white rounded-2xl p-6">
-                <Zap size={28} className="text-orange-500 mb-3" />
-                <h3 className="text-xl font-bold mb-1">{m.name}</h3>
-                <div className="grid grid-cols-3 gap-3 my-4">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-orange-500">{m.cap}</div>
-                    <div className="text-xs text-zinc-400">Kapasitet</div>
+                <div className="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 className="text-xl font-bold">{m.name}</h3>
+                    <div className="text-orange-400 text-xs font-medium mt-0.5">{m.type}</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-orange-500">{m.speed}</div>
-                    <div className="text-xs text-zinc-400">Hastighet</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-orange-500">{m.weight}</div>
-                    <div className="text-xs text-zinc-400">Vekt</div>
-                  </div>
+                  <Zap size={24} className="text-orange-500 flex-shrink-0" />
                 </div>
+                {m.cap !== "–" && (
+                  <div className="grid grid-cols-3 gap-3 my-4">
+                    <div className="text-center bg-zinc-800 rounded-lg p-2">
+                      <div className="text-lg font-bold text-orange-500">{m.cap}</div>
+                      <div className="text-xs text-zinc-400">Kapasitet</div>
+                    </div>
+                    <div className="text-center bg-zinc-800 rounded-lg p-2">
+                      <div className="text-lg font-bold text-orange-500">{m.speed}</div>
+                      <div className="text-xs text-zinc-400">Hastighet</div>
+                    </div>
+                    <div className="text-center bg-zinc-800 rounded-lg p-2">
+                      <div className="text-sm font-bold text-orange-500">{m.drive}</div>
+                      <div className="text-xs text-zinc-400">Drivkraft</div>
+                    </div>
+                  </div>
+                )}
                 <p className="text-zinc-300 text-sm leading-relaxed mb-4">{m.desc}</p>
                 <div className="flex flex-wrap gap-2">
                   {m.uses.map((u) => (
