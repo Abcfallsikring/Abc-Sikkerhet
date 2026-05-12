@@ -1,6 +1,3 @@
-n ld · TSX
-Copy
-
 export function JsonLd() {
   const schema = {
     "@context": "https://schema.org",
