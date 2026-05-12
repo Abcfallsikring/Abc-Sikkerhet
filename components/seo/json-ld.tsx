@@ -1,32 +1,12 @@
+n ld · TSX
+Copy
+
 export function JsonLd() {
-  const organizationSchema = {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "ABC Sikkerhet AS",
     alternateName: "ABC Fallsikring",
-    url: "https://abcfallsikring.no",
-    logo: "https://abcfallsikring.no/logo.png",
-    description: "ABC Sikkerhet AS er eksperter på fallsikring, arbeid i høyden, rope access og redningstjenester. Autorisert forhandler av Skylotec, Petzl og Actsafe taumopeder (ACX, ICX, PMX, PME, ACC).",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "Korniveien 1",
-      addressLocality: "Barkåker",
-      postalCode: "3157",
-      addressCountry: "NO",
-    },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+47-33-74-08-88",
-      contactType: "customer service",
-      email: "finn@abcfallsikring.no",
-    },
-  }
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://abcfallsikring.no/#organization",
-    name: "ABC Sikkerhet AS",
     url: "https://abcfallsikring.no",
     telephone: "+47-33-74-08-88",
     email: "finn@abcfallsikring.no",
@@ -37,98 +17,64 @@ export function JsonLd() {
       postalCode: "3157",
       addressCountry: "NO",
     },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "07:00",
-        closes: "16:00",
-      },
-    ],
-    areaServed: { "@type": "Country", name: "Norge" },
   }
-
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
-    </>
-  )
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 }
-
-export function FAQJsonLd({ faqs }: { faqs: { question: string; answer: string }[] }) {
-  const faqSchema = {
+ 
+export function FAQJsonLd({
+  faqs,
+  questions,
+}: {
+  faqs?: { question: string; answer: string }[]
+  questions?: { question: string; answer: string }[]
+}) {
+  const items = faqs || questions || []
+  const schema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: faqs.map((faq) => ({
+    mainEntity: items.map((item) => ({
       "@type": "Question",
-      name: faq.question,
-      acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      name: item.question,
+      acceptedAnswer: { "@type": "Answer", text: item.answer },
     })),
   }
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 }
-
+ 
 export function ArticleJsonLd({
-  title,
-  description,
-  publishedAt,
-  publishedTime,
-  modifiedTime,
-  updatedAt,
-  slug,
-  url,
-  author,
+  title, description, publishedAt, publishedTime, modifiedTime, updatedAt, slug, url, author,
 }: {
-  title: string
-  description: string
-  publishedAt?: string
-  publishedTime?: string
-  modifiedTime?: string
-  updatedAt?: string
-  slug?: string
-  url?: string
-  author?: string
+  title: string; description: string; publishedAt?: string; publishedTime?: string
+  modifiedTime?: string; updatedAt?: string; slug?: string; url?: string; author?: string
 }) {
-  const articleSchema = {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: title,
-    description: description,
+    description,
     datePublished: publishedAt || publishedTime,
     dateModified: updatedAt || modifiedTime,
-    author: {
-      "@type": "Person",
-      name: author || "ABC Sikkerhet AS",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "ABC Sikkerhet AS",
-      logo: { "@type": "ImageObject", url: "https://abcfallsikring.no/logo.png" },
-    },
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": url || `https://abcfallsikring.no/blogg/${slug}`,
-    },
+    author: { "@type": "Person", name: author || "ABC Sikkerhet AS" },
+    publisher: { "@type": "Organization", name: "ABC Sikkerhet AS", logo: { "@type": "ImageObject", url: "https://abcfallsikring.no/logo.png" } },
+    mainEntityOfPage: { "@type": "WebPage", "@id": url || `https://abcfallsikring.no/blogg/${slug}` },
   }
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 }
-
+ 
 export function ServiceJsonLd({ name, description, slug }: { name: string; description: string; slug: string }) {
-  const serviceSchema = {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    name,
-    description,
+    name, description,
     provider: { "@type": "Organization", name: "ABC Sikkerhet AS", url: "https://abcfallsikring.no" },
     url: `https://abcfallsikring.no/tjenester/${slug}`,
     areaServed: { "@type": "Country", name: "Norge" },
   }
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 }
-
+ 
 export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string }[] }) {
-  const breadcrumbSchema = {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: items.map((item, index) => ({
@@ -138,5 +84,6 @@ export function BreadcrumbJsonLd({ items }: { items: { name: string; url: string
       item: item.url,
     })),
   }
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 }
+ 
