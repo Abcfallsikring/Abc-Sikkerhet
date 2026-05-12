@@ -1,6 +1,7 @@
 export const siteConfig = {
   name: "ABC Sikkerhet AS",
   shortName: "ABC Sikkerhet",
+  organizationNumber: "922 646 260", // ABC Sikkerhet AS
   title: "ABC Sikkerhet AS – Fallsikring, Arbeid i høyden & Redning",
   description:
     "ABC Sikkerhet AS er eksperter på fallsikring, arbeid i høyden, rope access og redningstjenester. Autorisert forhandler av Skylotec, Petzl og Actsafe taumopeder (ACX, ICX, PMX, PME, ACC). Sertifiserte kurs og godkjente redningssett til byggeplass.",
