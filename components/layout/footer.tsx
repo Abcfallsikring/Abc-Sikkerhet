@@ -1,177 +1,95 @@
-import Link from 'next/link'
-import { Phone, Mail, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react'
-import { siteConfig } from '@/lib/config'
+import Link from "next/link"
+import { Shield, Phone, Mail, MapPin } from "lucide-react"
 
-export function Footer() {
+export default function Footer() {
   return (
-    <footer className="bg-secondary border-t border-border">
-      {/* Main Footer */}
-      <div className="container mx-auto px-4 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-4">
-              <div className="h-10 w-10 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">H</span>
-              </div>
-              <span className="font-bold text-xl text-foreground">Høyde Sikkerhet</span>
+    <footer className="bg-zinc-900 text-zinc-300">
+      <div className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          {/* Brand */}
+          <div className="lg:col-span-1">
+            <Link href="/" className="flex items-center gap-2 font-bold text-xl text-white mb-4">
+              <Shield className="text-orange-500" size={24} />
+              ABC Sikkerhet
             </Link>
-            <p className="text-muted-foreground mb-6 max-w-sm leading-relaxed">
-              Norges ledende eksperter på fallsikring, arbeid i høyden og redningstjenester. 
-              Vi leverer trygge løsninger for industri, bygg og offshore.
+            <p className="text-sm text-zinc-400 mb-6 leading-relaxed">
+              Eksperter på fallsikring, arbeid i høyden og redningstjenester. Vi leverer trygge løsninger for industri, bygg og offshore – inkludert redningssett og Actsafe taumopeder.
             </p>
-            
-            <div className="flex flex-col gap-3 mb-6">
-              <a 
-                href={`tel:${siteConfig.contact.phone}`}
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Phone className="h-5 w-5 text-primary" />
-                {siteConfig.contact.phone}
+            <div className="flex flex-col gap-2 text-sm">
+              <a href="tel:+4799999999" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Phone size={14} className="text-orange-500" />
+                +47 99 99 99 99
               </a>
-              <a 
-                href={`mailto:${siteConfig.contact.email}`}
-                className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Mail className="h-5 w-5 text-primary" />
-                {siteConfig.contact.email}
+              <a href="mailto:finn@abcfallsikring.no" className="flex items-center gap-2 hover:text-white transition-colors">
+                <Mail size={14} className="text-orange-500" />
+                finn@abcfallsikring.no
               </a>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <MapPin className="h-5 w-5 text-primary" />
-                {siteConfig.contact.address}
-              </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-4">
-              <a 
-                href={siteConfig.social.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-muted rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
-              <a 
-                href={siteConfig.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-muted rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a 
-                href={siteConfig.social.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-muted rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </a>
+              <span className="flex items-center gap-2">
+                <MapPin size={14} className="text-orange-500" />
+                Norge
+              </span>
             </div>
           </div>
 
-          {/* Services */}
+          {/* Tjenester */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Tjenester</h3>
-            <ul className="space-y-3">
-              {siteConfig.navigation.footer.services.map((item) => (
+            <h3 className="text-white font-semibold mb-4">Tjenester</h3>
+            <ul className="flex flex-col gap-2 text-sm">
+              {[
+                { label: "Fallsikring", href: "/tjenester/fallsikring" },
+                { label: "Rope Access", href: "/tjenester/rope-access" },
+                { label: "Redningstjenester", href: "/tjenester/redningstjenester" },
+                { label: "Redningssett", href: "/tjenester/redningssett" },
+                { label: "Actsafe Taumopeder", href: "/tjenester/actsafe" },
+                { label: "Kurs og opplæring", href: "/tjenester/kurs" },
+                { label: "Inspeksjon", href: "/tjenester/inspeksjon" },
+              ].map((item) => (
                 <li key={item.href}>
-                  <Link 
-                    href={item.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {item.title}
+                  <Link href={item.href} className="hover:text-white transition-colors">
+                    {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Selskapet */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Selskapet</h3>
-            <ul className="space-y-3">
-              {siteConfig.navigation.footer.company.map((item) => (
+            <h3 className="text-white font-semibold mb-4">Selskapet</h3>
+            <ul className="flex flex-col gap-2 text-sm">
+              {[
+                { label: "Om oss", href: "/om-oss" },
+                { label: "Vårt team", href: "/om-oss#team" },
+                { label: "Karriere", href: "/karriere" },
+                { label: "Sertifiseringer", href: "/om-oss#sertifiseringer" },
+              ].map((item) => (
                 <li key={item.href}>
-                  <Link 
-                    href={item.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {item.title}
+                  <Link href={item.href} className="hover:text-white transition-colors">
+                    {item.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Sertifiseringer */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Ressurser</h3>
-            <ul className="space-y-3">
-              {siteConfig.navigation.footer.resources.map((item) => (
-                <li key={item.href}>
-                  <Link 
-                    href={item.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
+            <h3 className="text-white font-semibold mb-4">Sertifiseringer</h3>
+            <ul className="flex flex-col gap-3 text-sm">
+              <li><span className="text-orange-500 font-medium">ISO 9001:2015</span><br /><span className="text-zinc-400">Kvalitetsledelse</span></li>
+              <li><span className="text-orange-500 font-medium">ISO 45001:2018</span><br /><span className="text-zinc-400">HMS-ledelse</span></li>
+              <li><span className="text-orange-500 font-medium">IRATA</span><br /><span className="text-zinc-400">Industrial Rope Access</span></li>
+              <li><span className="text-orange-500 font-medium">SOFT</span><br /><span className="text-zinc-400">Skandinavisk organisasjon for fallsikring</span></li>
             </ul>
           </div>
         </div>
 
-        {/* Certifications */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <h3 className="font-semibold text-foreground mb-4 text-center">Sertifiseringer</h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            {siteConfig.certifications.map((cert) => (
-              <div 
-                key={cert.name}
-                className="flex items-center gap-2 px-4 py-2 bg-muted rounded-lg"
-              >
-                <div className="h-2 w-2 bg-primary rounded-full" />
-                <span className="text-sm font-medium text-foreground">{cert.name}</span>
-                <span className="text-xs text-muted-foreground">- {cert.description}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* SEO Text Section */}
-      <div className="border-t border-border bg-background/50">
-        <div className="container mx-auto px-4 py-8">
-          <p className="text-sm text-muted-foreground text-center max-w-4xl mx-auto leading-relaxed">
-            Høyde Sikkerhet AS er en ledende leverandør av fallsikringsløsninger og tjenester i Norge. 
-            Vi tilbyr sertifiserte kurs innen fallsikring, rope access (IRATA), arbeid i høyden og redningstjenester. 
-            Våre eksperter hjelper bedrifter med å overholde Arbeidstilsynets krav, NS-EN 363, NS-EN 365 og andre relevante standarder. 
-            Vi leverer til industri, bygg, offshore, vindkraft og solenergi over hele Norge.
-          </p>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-border">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-            <p>&copy; {new Date().getFullYear()} Høyde Sikkerhet AS. Alle rettigheter reservert.</p>
-            <div className="flex items-center gap-6">
-              {siteConfig.navigation.footer.legal.map((item) => (
-                <Link 
-                  key={item.href}
-                  href={item.href}
-                  className="hover:text-primary transition-colors"
-                >
-                  {item.title}
-                </Link>
-              ))}
-            </div>
+        <div className="border-t border-zinc-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-zinc-500">
+          <p>© 2026 ABC Sikkerhet AS. Alle rettigheter reservert.</p>
+          <div className="flex gap-6">
+            <Link href="/personvern" className="hover:text-white transition-colors">Personvern</Link>
+            <Link href="/vilkar" className="hover:text-white transition-colors">Vilkår</Link>
+            <Link href="/cookies" className="hover:text-white transition-colors">Cookies</Link>
           </div>
         </div>
       </div>
