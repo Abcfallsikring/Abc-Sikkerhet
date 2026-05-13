@@ -10,7 +10,6 @@ import { CTA } from '@/components/sections/cta'
 
 export const metadata: Metadata = {
   title: 'Om oss - Norges ledende eksperter på fallsikring',
-  description: 'Lær mer om Høyde Sikkerhet AS. Over 15 års erfaring med fallsikring, rope access og arbeid i høyden. ISO-sertifisert og IRATA-godkjent.',
   openGraph: {
     title: 'Om oss | Høyde Sikkerhet',
     description: 'Over 15 års erfaring med fallsikring, rope access og arbeid i høyden.',
@@ -45,7 +44,6 @@ const team = [
   {
     name: 'Erik Andersen',
     role: 'Daglig leder',
-    bio: 'Over 20 års erfaring innen HMS og fallsikring. IRATA Level 3 sertifisert.',
   },
   {
     name: 'Maria Haugen',
@@ -60,7 +58,6 @@ const team = [
   {
     name: 'Lise Johansen',
     role: 'Kursleder',
-    bio: 'Ansvarlig for opplæring og sertifisering. IRATA-instruktør.',
   },
 ]
 
@@ -124,7 +121,6 @@ export default function AboutPage() {
                 </p>
                 <p>
                   I dag er vi stolte av å være ISO 9001 og ISO 45001-sertifisert, og våre teknikere 
-                  holder de høyeste IRATA-sertifiseringene. Men det viktigste for oss er fortsatt det 
                   samme som i starten: ingen ulykker, ingen skader.
                 </p>
               </div>
@@ -134,7 +130,6 @@ export default function AboutPage() {
               <div className="space-y-6">
                 {[
                   { year: '2009', event: 'Høyde Sikkerhet grunnlagt' },
-                  { year: '2012', event: 'IRATA-godkjent opplæringssenter' },
                   { year: '2015', event: 'ISO 9001-sertifisering' },
                   { year: '2018', event: '500 prosjekter fullført' },
                   { year: '2020', event: 'ISO 45001-sertifisering' },

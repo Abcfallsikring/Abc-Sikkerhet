@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "fallsikring", "arbeid i høyden", "rope access", "industriell klatring",
     "redningstjenester", "redningssett", "umiddelbar redning", "HMS",
     "fallsikringsutstyr", "kurs fallsikring", "Norge", "Skylotec", "Petzl",
-    "Actsafe", "taumoped", "ACX", "ICX", "PMX", "PME", "ACC", "IRATA",
+    "Actsafe", "taumoped", "ACX", "ICX", "PMX", "PME", "ACC", "soft",
     "SOFT", "hengetrauma", "fallsele", "ABC fallsikring", "ABC Sikkerhet",
   ],
   authors: [{ name: "ABC Sikkerhet AS", url: "https://abcfallsikring.no" }],

@@ -78,7 +78,7 @@ export default function Footer() {
             <ul className="flex flex-col gap-3 text-sm">
               <li><span className="text-orange-500 font-medium">ISO 9001:2015</span><br /><span className="text-zinc-400">Kvalitetsledelse</span></li>
               <li><span className="text-orange-500 font-medium">ISO 45001:2018</span><br /><span className="text-zinc-400">HMS-ledelse</span></li>
-              <li><span className="text-orange-500 font-medium">IRATA</span><br /><span className="text-zinc-400">Industrial Rope Access</span></li>
+              <li><span className="text-orange-500 font-medium">soft</span><br /><span className="text-zinc-400">Industrial Rope Access</span></li>
               <li><span className="text-orange-500 font-medium">SOFT</span><br /><span className="text-zinc-400">Skandinavisk organisasjon for fallsikring</span></li>
             </ul>
           </div>

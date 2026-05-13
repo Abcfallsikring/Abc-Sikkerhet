@@ -72,7 +72,7 @@ export default function SiteFooter() {
             <ul className="flex flex-col gap-3 text-sm">
               <li><span className="text-orange-500 font-medium">ISO 9001:2015</span><br /><span className="text-zinc-400">Kvalitetsledelse</span></li>
               <li><span className="text-orange-500 font-medium">ISO 45001:2018</span><br /><span className="text-zinc-400">HMS-ledelse</span></li>
-              <li><span className="text-orange-500 font-medium">IRATA</span><br /><span className="text-zinc-400">Industrial Rope Access</span></li>
+              <li><span className="text-orange-500 font-medium">soft</span><br /><span className="text-zinc-400">Industrial Rope Access</span></li>
               <li><span className="text-orange-500 font-medium">SOFT</span><br /><span className="text-zinc-400">Skandinavisk organisasjon for fallsikring</span></li>
             </ul>
           </div>
@@ -80,7 +80,7 @@ export default function SiteFooter() {
 
         <div className="border-t border-zinc-800 mt-12 pt-8 text-sm text-zinc-500">
           <p className="mb-4 leading-relaxed">
-            ABC Sikkerhet AS er en ledende leverandør av fallsikringsløsninger i Norge. Vi tilbyr sertifiserte kurs innen fallsikring, rope access (IRATA), arbeid i høyden og redningstjenester. Autorisert forhandler av Skylotec, Petzl og Actsafe taumopeder (ACX, ICX, PMX, PME, ACC). Vi leverer til industri, bygg, offshore, vindkraft og solenergi over hele Norge. Stort lager og rask levering.
+            ABC Sikkerhet AS er en ledende leverandør av fallsikringsløsninger i Norge. Vi tilbyr sertifiserte kurs innen fallsikring, rope access (soft), arbeid i høyden og redningstjenester. Autorisert forhandler av Skylotec, Petzl og Actsafe taumopeder (ACX, ICX, PMX, PME, ACC). Vi leverer til industri, bygg, offshore, vindkraft og solenergi over hele Norge. Stort lager og rask levering.
           </p>
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
             <p>© 2026 ABC Sikkerhet AS · Org.nr. 922 646 260 · Alle rettigheter reservert.</p>

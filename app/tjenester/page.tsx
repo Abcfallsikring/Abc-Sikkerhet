@@ -8,7 +8,7 @@ import { CTA } from '@/components/sections/cta'
 
 export const metadata: Metadata = {
   title: 'Tjenester - Fallsikring, Rope Access og Arbeid i Høyden',
-  description: 'Komplette tjenester innen fallsikring, rope access, arbeid i høyden, redningstjenester, inspeksjon og kurs. Sertifiserte eksperter med ISO 9001 og IRATA.',
+  description: 'Komplette tjenester innen fallsikring, rope access, arbeid i høyden, redningstjenester, inspeksjon og kurs. Sertifiserte eksperter med ISO 9001.',
   openGraph: {
     title: 'Tjenester - Fallsikring, Rope Access og Arbeid i Høyden | Høyde Sikkerhet',
     description: 'Komplette tjenester innen fallsikring, rope access, arbeid i høyden, redningstjenester, inspeksjon og kurs.',

@@ -15,7 +15,6 @@ import {
 const services = [
   { icon: Shield, title: "Fallsikring", desc: "Komplette fallsikringssystemer og utstyr for trygg arbeid i høyden.", href: "/tjenester/fallsikring" },
   { icon: HardHat, title: "Arbeid i høyden", desc: "Profesjonelle tjenester for alle typer arbeid i høyden.", href: "/tjenester/arbeid-i-hoyden" },
-  { icon: Activity, title: "Rope Access", desc: "IRATA-sertifisert rope access for vanskelig tilgjengelige områder.", href: "/tjenester/rope-access" },
   { icon: LifeBuoy, title: "Redningssett & Umiddelbar redning", desc: "Påbudt redningssett til byggeplass og arbeid i høyden. Godkjente systemer og opplæring.", href: "/tjenester/redningssett", highlight: true },
   { icon: Zap, title: "Actsafe Taumopeder", desc: "Actsafe motoriserte taumopeder for sikker og effektiv vertikal forflytning. Opplæring og sertifisering.", href: "/tjenester/actsafe", highlight: true },
   { icon: Award, title: "Kurs og opplæring", desc: "Sertifiserte kurs innen fallsikring, arbeid i høyden, redning og Actsafe.", href: "/tjenester/kurs" },
@@ -77,8 +76,7 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 text-orange-400 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
             <Shield size={14} />
-            ISO 9001 &amp; IRATA Sertifisert
-          </div>
+           </div>
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
             Eksperter på fallsikring<br />
             <span className="text-orange-500">og arbeid i høyden</span>
@@ -114,12 +112,11 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-400 text-xs font-semibold px-3 py-1 rounded-full mb-4">
-              ROPE ACCESS · IRATA
+           
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Industriell klatring og rope access</h2>
             <p className="text-zinc-300 mb-4 leading-relaxed">
-              Rope access er den mest effektive og kostnadsbesparende metoden for å nå vanskelig tilgjengelige steder. Alle våre teknikere er IRATA-sertifiserte.
-            </p>
+                     </p>
             <ul className="flex flex-col gap-3 mb-8">
               {["IRATA Level 1, 2 og 3 sertifiserte teknikere", "Fasadearbeid, inspeksjon og vedlikehold", "Offshore og vindkraft", "Rask mobilisering – ingen stillas nødvendig"].map((p) => (
                 <li key={p} className="flex items-start gap-2.5 text-sm text-zinc-300">

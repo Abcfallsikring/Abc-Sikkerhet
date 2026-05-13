@@ -29,7 +29,7 @@ export function Hero() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full mb-6">
               <Award className="h-4 w-4 text-primary" />
-              <span className="text-sm text-primary font-medium">ISO 9001 &amp; IRATA Sertifisert</span>
+              <span className="text-sm text-primary font-medium">ISO 9001 &amp; soft Sertifisert</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight text-balance">
@@ -114,7 +114,7 @@ export function Hero() {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground text-sm">Sertifisert</p>
-                    <p className="text-xs text-muted-foreground">IRATA Level 3</p>
+                    <p className="text-xs text-muted-foreground">soft Level 3</p>
                   </div>
                 </div>
               </div>

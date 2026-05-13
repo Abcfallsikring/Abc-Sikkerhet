@@ -18,7 +18,7 @@ const previewFaqs = [
   },
   {
     question: 'Hvilke sertifiseringer kreves for arbeid i høyden?',
-    answer: 'For generelt arbeid i høyden kreves dokumentert opplæring iht. Arbeidsmiljøloven. For rope access kreves IRATA-sertifisering (Level 1-3). Alle som arbeider med fallsikring bør ha gjennomført kurs i bruk av personlig verneutstyr.',
+    answer: 'For generelt arbeid i høyden kreves dokumentert opplæring iht. Arbeidsmiljøloven. For rope access kreves soft-sertifisering (Level 1-3). Alle som arbeider med fallsikring bør ha gjennomført kurs i bruk av personlig verneutstyr.',
   },
   {
     question: 'Hva inkluderer en risikoanalyse for arbeid i høyden?',

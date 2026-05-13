@@ -82,7 +82,6 @@ const serviceContent: Record<string, {
   'arbeid-i-hoyden': {
     intro: 'Våre sertifiserte teknikere utfører alle typer arbeid i høyden på en sikker og effektiv måte. Med over 15 års erfaring har vi løst komplekse oppgaver for industri, offshore, bygg og energisektoren over hele Norge.',
     benefits: [
-      'IRATA-sertifiserte teknikere',
       'Fleksible løsninger for alle bransjer',
       'Minimalt fotavtrykk på arbeidsstedet',
       'Rask mobilisering ved behov',
@@ -103,9 +102,7 @@ const serviceContent: Record<string, {
     ],
   },
   'rope-access': {
-    intro: 'Rope access er en effektiv og kostnadsbesparende metode for å nå vanskelig tilgjengelige områder. Våre IRATA-sertifiserte teknikere bruker industrielle klatreteknikker for inspeksjon, vedlikehold og reparasjon i høyden.',
     benefits: [
-      'IRATA Level 3 sertifiserte teknikere',
       'Raskere enn tradisjonelt stillas',
       'Lavere kostnader',
       'Minimalt fotavtrykk',
@@ -121,7 +118,6 @@ const serviceContent: Record<string, {
       { title: 'Rapport', description: 'Dokumentasjon av utført arbeid.' },
     ],
     faq: [
-      { question: 'Hva er IRATA-sertifisering?', answer: 'IRATA (Industrial Rope Access Trade Association) er den internasjonalt anerkjente standarden for industriell tau-tilgang med tre nivåer av kompetanse.' },
       { question: 'Når er rope access bedre enn stillas?', answer: 'Rope access er ofte mer effektivt ved kortvarige oppdrag, vanskelig tilgjengelige områder, og når minimalt fotavtrykk er ønskelig.' },
     ],
   },
@@ -155,7 +151,6 @@ const serviceContent: Record<string, {
       'Praktisk rettet opplæring',
       'Kurs på deres lokasjon',
       'Skreddersydde kurs',
-      'IRATA Level 1-3',
       'Dokumenterte kompetansebevis',
     ],
     process: [
@@ -167,8 +162,6 @@ const serviceContent: Record<string, {
       { title: 'Sertifisering', description: 'Utstedelse av kompetansebevis.' },
     ],
     faq: [
-      { question: 'Hvilke kurs tilbyr dere?', answer: 'Vi tilbyr grunnkurs i fallsikring, bruk av PPE, IRATA nivå 1-3, redningskurs og bedriftsspesifikke kurs.' },
-      { question: 'Hvor lang tid tar et kurs?', answer: 'Kursvarighet varierer fra én dag for grunnkurs til flere uker for IRATA-sertifisering.' },
     ],
   },
   'inspeksjon': {

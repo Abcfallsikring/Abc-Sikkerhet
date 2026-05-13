@@ -9,7 +9,7 @@ const features = [
   {
     icon: Award,
     title: 'Sertifisert ekspertise',
-    description: 'ISO 9001, ISO 45001 og IRATA-sertifiserte teknikere med omfattende erfaring.',
+    description: 'ISO 9001, ISO 45001 og soft-sertifiserte teknikere med omfattende erfaring.',
   },
   {
     icon: Clock,
