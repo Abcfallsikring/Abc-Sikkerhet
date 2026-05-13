@@ -13,7 +13,7 @@ export default function Header() {
       <div className="bg-zinc-900 text-zinc-300 text-sm py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex gap-6">
-            <a href="tel:+4733740888"" className="flex items-center gap-1.5 hover:text-white transition-colors">
+            <a href="tel:+4733740888" className="flex items-center gap-1.5 hover:text-white transition-colors">
               <Phone size={13} />
               +47 33 74 08 88
             </a>
