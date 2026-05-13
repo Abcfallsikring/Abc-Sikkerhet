@@ -1,6 +1,3 @@
-Onix tjeneste · TSX
-Copy
-
 import Link from "next/link"
 import Image from "next/image"
 import { ArrowLeft, ArrowRight, CheckCircle, FileText, Shield, Clock, Users, Bell, Smartphone, BarChart2 } from "lucide-react"
