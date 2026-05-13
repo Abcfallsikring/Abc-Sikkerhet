@@ -191,10 +191,10 @@ export default function ProduktartikkelPage() {
           </div>
 
           <p className="text-zinc-600 leading-relaxed mb-4">
-            Actsafe er et svensk selskap som har revolusjonert måten industrielle klatrere og vindteknikere forflytter seg vertikalt. Deres motoriserte taumopeder – AS3 og AS6 – gjør opp- og nedstigning raskere, sikrere og langt mindre fysisk krevende enn tradisjonell manuell klatring.
+            Actsafe er et svensk selskap som har revolusjonert måten industrielle klatrere og vindteknikere forflytter seg vertikalt. Deres motoriserte taumopeder gjør opp- og nedstigning raskere, sikrere og langt mindre fysisk krevende enn tradisjonell manuell klatring.
           </p>
           <p className="text-zinc-600 leading-relaxed mb-6">
-            Actsafe er godkjent som personlig verneutstyr (PVU) og brukes av tårnkranoperatører, vindturbinteknikere, industrielle klatrere, fjellsikringsarbeidere og redningsmannskap over hele verden. ABC Sikkerhet er forhandler og tilbyr opplæring og sertifisering.
+            Actsafe er godkjent som personlig verneutstyr (PVU) og brukes av tårnkranoperatører, vindturbinteknikere, industrielle klatrere, fjellsikringsarbeidere og redningsmannskap over hele verden. ABC Sikkerhet er autorisert forhandler og tilbyr opplæring og sertifisering for alle modeller.
           </p>
 
           <div className="space-y-4 mb-8">
@@ -223,7 +223,7 @@ export default function ProduktartikkelPage() {
                 cap: "250 kg",
                 speed: "17 m/min",
                 drive: "Bensin",
-                desc: "PMX er bensindrevet og gir ubegrenset rekkevidde – ideell for svært dype sjakter, høye master eller steder uten strømtilgang. Rekkevidde 700–750 m per tank. Robust design tåler støv, skitt og røff behandling. Lukkede taulåssystem holder tauet på plass selv i skitne forhold.",
+                desc: "PMX er bensindrevet og gir ubegrenset rekkevidde – ideell for svært dype sjakter, høye master eller steder uten strømtilgang. Rekkevidde 700–750 m per tank. Robust design tåler støv, skitt og røff behandling.",
                 uses: ["Dype sjakter", "Lange oppdrag", "Ingen strøm tilgjengelig", "Offshore"],
               },
               {
