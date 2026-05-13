@@ -158,7 +158,7 @@ export default function OpplaringPage() {
           {[
             { icon: HardHat, title: "Grunnkurs fallsikring", desc: "1–2 dager. Teori og praksis. Kursbevis utleveres." },
             { icon: Award, title: "Redningskurs", desc: "Halvdag. Praktisk redning fra høyden. Øvelse på arbeidssted." },
-            { icon: BookOpen, title: "Actsafe operatørkurs", desc: "Godkjent opplæring i Actsafe taumopeder AS3 og AS6." },
+            { icon: BookOpen, title: "Actsafe operatørkurs", desc: "Godkjent opplæring i Actsafe taumopeder." },
           ].map((kurs) => (
             <div key={kurs.title} className="bg-zinc-50 border border-zinc-200 rounded-xl p-5">
               <kurs.icon size={24} className="text-orange-500 mb-3" />
