@@ -37,7 +37,7 @@ export const siteConfig = {
     "redningstjenester", "redningssett", "umiddelbar redning", "HMS",
     "fallsikringsutstyr", "kurs fallsikring", "Norge", "Skylotec", "Petzl",
     "Actsafe", "taumoped", "ACX", "ICX", "PMX", "PME", "ACC",
-    "IRATA", "SOFT", "hengetrauma", "fallsele", "ABC fallsikring", "ABC Sikkerhet",
+    "SOFT", "hengetrauma", "fallsele", "ABC fallsikring", "ABC Sikkerhet",
   ],
   openingHours: "Man–Fre 07:00–16:00",
   openingHoursSpec: {
@@ -45,26 +45,25 @@ export const siteConfig = {
     opens: "07:00",
     closes: "16:00",
   },
-  certifications: ["ISO 9001:2015", "ISO 45001:2018", "IRATA", "SOFT"],
+  certifications: ["ISO 9001:2015", "ISO 45001:2018", "SOFT"],
   locale: "nb_NO",
   language: "nb",
   googleSiteVerification: "",
   twitterHandle: "@abcfallsikring",
 }
- 
+
 export const services = [
-  { slug: "fallsikring", title: "Fallsikring", shortDescription: "Komplette fallsikringssystemer og utstyr for trygg arbeid i høyden.", description: "ABC Sikkerhet leverer komplette fallsikringssystemer tilpasset ditt arbeidssted.", icon: "Shield", features: ["Risikovurdering og planlegging", "Godkjente ankerpunkter og wireløsninger", "Personlig verneutstyr (PVU)", "Periodisk kontroll og sertifisering", "Opplæring i bruk av utstyr"] },
-  { slug: "arbeid-i-hoyden", title: "Arbeid i høyden", shortDescription: "Profesjonelle tjenester for alle typer arbeid i høyden.", description: "Vi utfører alle typer arbeid i høyden på en sikker og effektiv måte.", icon: "Mountain", features: ["Fasadearbeid og vedlikehold", "Inspeksjon og kontroll", "Montering og demontering", "Takreparasjoner", "Industrielt renhold"] },
-  { slug: "rope-access", title: "Rope Access", shortDescription: "IRATA-sertifisert rope access for vanskelig tilgjengelige områder.", description: "Rope access er en kostnadseffektiv metode for å nå vanskelig tilgjengelige steder.", icon: "Cable", features: ["IRATA Level 1, 2 og 3 teknikere", "Inspeksjon av konstruksjoner", "Vedlikehold og reparasjon", "NDT-testing i høyden", "Offshore og vindkraft"] },
-  { slug: "redningstjenester", title: "Redningstjenester", shortDescription: "Beredskap og umiddelbar redning ved arbeid i høyden.", description: "ABC Sikkerhet leverer godkjente redningssett og opplæring i umiddelbar redning.", icon: "Ambulance", features: ["Godkjente redningssett til byggeplass", "Umiddelbar redning uten nødetater", "Redningsplaner og beredskapsrutiner", "Praktisk redningsøvelse", "Skylotec og Petzl redningsutstyr"] },
-  { slug: "redningssett", title: "Redningssett", shortDescription: "Lovpålagte redningssett for byggeplass og arbeid i høyden.", description: "Norsk regelverk krever at det alltid finnes et godkjent redningssett tilgjengelig.", icon: "Ambulance", features: ["Komplett redningssett etter gjeldende krav", "Evakueringssele og heisanordning", "Trefot/ankerpunkt for sjakter og luker", "Beredskapsplan inkludert", "Opplæring av eget personell"] },
+  { slug: "fallsikring", title: "Fallsikring", shortDescription: "Komplette fallsikringssystemer og utstyr for trygg arbeid i høyden.", description: "ABC Sikkerhet leverer komplette fallsikringssystemer tilpasset ditt arbeidssted. Vi hjelper med risikovurdering, valg av riktig utstyr, installasjon og opplæring.", icon: "Shield", features: ["Risikovurdering og planlegging", "Godkjente ankerpunkter og wireløsninger", "Personlig verneutstyr (PVU)", "Periodisk kontroll og sertifisering", "Opplæring i bruk av utstyr"] },
+  { slug: "arbeid-i-hoyden", title: "Arbeid i høyden", shortDescription: "Profesjonelle tjenester for alle typer arbeid i høyden.", description: "Vi utfører alle typer arbeid i høyden på en sikker og effektiv måte. Våre sertifiserte teknikere har erfaring fra bygg, industri og offshore.", icon: "Mountain", features: ["Fasadearbeid og vedlikehold", "Inspeksjon og kontroll", "Montering og demontering", "Takreparasjoner", "Industrielt renhold"] },
+  { slug: "rope-access", title: "Rope Access", shortDescription: "Sertifisert rope access for vanskelig tilgjengelige områder.", description: "Rope access er en kostnadseffektiv metode for å nå vanskelig tilgjengelige steder uten bruk av stillas eller lift.", icon: "Cable", features: ["Sertifiserte rope access-teknikere", "Inspeksjon av konstruksjoner", "Vedlikehold og reparasjon", "NDT-testing i høyden", "Offshore og vindkraft"] },
+  { slug: "redningstjenester", title: "Redningstjenester", shortDescription: "Beredskap og umiddelbar redning ved arbeid i høyden.", description: "ABC Sikkerhet leverer godkjente redningssett og opplæring i umiddelbar redning uten nødetatene.", icon: "Ambulance", features: ["Godkjente redningssett til byggeplass", "Umiddelbar redning uten nødetater", "Redningsplaner og beredskapsrutiner", "Praktisk redningsøvelse", "Skylotec og Petzl redningsutstyr"] },
+  { slug: "redningssett", title: "Redningssett", shortDescription: "Lovpålagte redningssett for byggeplass og arbeid i høyden.", description: "Norsk regelverk krever at det alltid finnes et godkjent redningssett tilgjengelig ved arbeid i høyden.", icon: "Ambulance", features: ["Komplett redningssett etter gjeldende krav", "Evakueringssele og heisanordning", "Trefot/ankerpunkt for sjakter og luker", "Beredskapsplan inkludert", "Opplæring av eget personell"] },
   { slug: "actsafe", title: "Actsafe Taumopeder", shortDescription: "Motoriserte taumopeder for sikker og effektiv vertikal forflytning.", description: "ABC Sikkerhet er autorisert forhandler for Actsafe taumopeder. Vi fører ACX, ICX, PMX, PME og ACC.", icon: "Zap", features: ["Actsafe ACX – elektrisk, 250 kg", "Actsafe ICX – kompakt elektrisk", "Actsafe PMX – bensindrevet, 250 kg", "Actsafe PME – lett bensindrevet", "Actsafe ACC – klatrehjelp", "Sertifisert operatøropplæring"] },
-  { slug: "kurs", title: "Kurs og opplæring", shortDescription: "Sertifiserte kurs innen fallsikring, arbeid i høyden og Actsafe.", description: "Vi tilbyr sertifiserte kurs som oppfyller kravene i Forskrift om utførelse av arbeid.", icon: "GraduationCap", features: ["Grunnkurs fallsikring (1–2 dager)", "Redningskurs – umiddelbar redning", "Actsafe operatørkurs", "Rope access (IRATA) kurs", "Skreddersydde bedriftskurs"] },
+  { slug: "kurs", title: "Kurs og opplæring", shortDescription: "Sertifiserte kurs innen fallsikring, arbeid i høyden og Actsafe.", description: "Vi tilbyr sertifiserte kurs som oppfyller kravene i Forskrift om utførelse av arbeid.", icon: "GraduationCap", features: ["Grunnkurs fallsikring (NS 9610)", "Oppfriskning fallsikring", "Actsafe operatørkurs", "Stolpekurs / mastekurs", "Skreddersydde bedriftskurs"] },
   { slug: "inspeksjon", title: "Inspeksjon", shortDescription: "Periodisk kontroll og sertifisering av fallsikringsutstyr.", description: "Alt personlig fallsikringsutstyr skal inn til periodisk kontroll hvert 12. måned.", icon: "CheckCircle", features: ["Periodisk kontroll hvert 12. måned", "Kontroll av seler, liner og blokker", "Inspeksjon av ankerpunkter", "Kassasjonsvurdering", "Dokumentasjon og sertifikat"] },
   { slug: "vedlikehold", title: "Vedlikehold", shortDescription: "Service og vedlikehold av fallsikringssystemer.", description: "Vi utfører vedlikehold og service på alle typer fallsikringssystemer.", icon: "Wrench", features: ["Service av wire- og skinneanlegg", "Vedlikehold av ankerpunkter", "Korrosjonsbehandling", "Utskifting av slitte komponenter", "Servicerapport og dokumentasjon"] },
   { slug: "risikoanalyse", title: "Risikoanalyse", shortDescription: "HMS-rådgivning og risikovurdering for arbeid i høyden.", description: "Vi hjelper bedrifter med å kartlegge risiko ved arbeid i høyden og utarbeide nødvendige HMS-planer.", icon: "ClipboardList", features: ["Kartlegging av arbeidssted og risiko", "Skriftlig risikovurdering", "Valg av sikringstiltak", "Redningsplan og beredskapsrutiner", "Oppfølging og revisjon"] },
 ]
- 
+
 export type SiteConfig = typeof siteConfig
 export type Service = typeof services[0]
- 
