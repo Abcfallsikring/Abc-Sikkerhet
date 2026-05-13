@@ -176,14 +176,14 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1 bg-zinc-100 rounded-2xl p-8 border border-zinc-200">
               <Zap size={48} className="text-orange-500 mb-4" />
-              <h3 className="text-xl font-bold text-zinc-900 mb-3">Actsafe AS3 &amp; AS6</h3>
+              <h3 className="text-xl font-bold text-zinc-900 mb-3">Actsafe taumopeder</h3>
               <p className="text-zinc-600 text-sm leading-relaxed mb-4">
-                Actsafe er verdensledende innen motoriserte taumopeder for profesjonell bruk. AS3 og AS6 brukes av tårnkranoperatører, vindteknikere, industrielle klatrere og redningsmannskap over hele verden.
+                Actsafe er verdensledende innen motoriserte taumopeder for profesjonell bruk. ACX, ICX, PMX, PME og ACC brukes av tårnkranoperatører, vindteknikere, industrielle klatrere og redningsmannskap over hele verden.
               </p>
               <ul className="flex flex-col gap-2 text-sm text-zinc-600">
                 {[
                   "Motorisert opp- og nedstigning i tau",
-                  "Bærekapasitet opp til 250 kg (AS6)",
+                  "Bærekapasitet opp til 250 kg (ACX og PMX)",
                   "Egnet for turbiner, master, fasader og konstruksjoner",
                   "Godkjent som PVU (personlig verneutstyr)",
                   "Kan brukes til redning av skadet person",
@@ -203,10 +203,10 @@ export default function HomePage() {
                 Motorisert forflytning i høyden – trygt og effektivt
               </h2>
               <p className="text-zinc-600 mb-4 leading-relaxed">
-                Actsafe taumopeder revolusjonerer arbeid i høyden ved å gjøre vertikal forflytning raskere, sikrere og langt mindre belastende for kroppen. ABC Sikkerhet tilbyr salg, opplæring og sertifisering.
+                Actsafe taumopeder revolusjonerer arbeid i høyden ved å gjøre vertikal forflytning raskere, sikrere og langt mindre belastende for kroppen. ABC Sikkerhet er autorisert forhandler og tilbyr salg, opplæring og sertifisering.
               </p>
               <p className="text-zinc-600 mb-6 leading-relaxed">
-                Våre instruktører er godkjent for å gi opplæring i Actsafe-systemene, og kursene er praktisk orienterte med fokus på riktig bruk, daglig inspeksjon og nødprosedyrer.
+                Vi fører ACX, ICX, PMX, PME og ACC – med godt lager og rask levering. Våre instruktører er godkjent for opplæring i alle Actsafe-modeller.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
@@ -289,10 +289,10 @@ export default function HomePage() {
               Få gratis tilbud
             </Link>
             <a
-              href="tel:+4799999999"
+              href="tel:+4733740888"
               className="border border-zinc-600 hover:border-zinc-400 text-white font-semibold px-8 py-3.5 rounded-md transition-colors"
             >
-              Ring oss nå
+              Ring oss: +47 33 74 08 88
             </a>
           </div>
           <p className="text-zinc-500 text-sm mt-6">Rask responstid • Gratis befaring • Konkurransedyktige priser</p>
