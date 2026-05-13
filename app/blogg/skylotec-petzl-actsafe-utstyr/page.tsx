@@ -289,7 +289,7 @@ export default function ProduktartikkelPage() {
               "Korrekt innfesting i tau og sele",
               "Opp- og nedstigning – praktisk øvelse",
               "Nødprosedyre: manuell nedstigning ved strømbrudd",
-              "Bruk av AS6 til redning av skadet person",
+              "Bruk av ACX til redning av skadet person",
               "Vedlikehold og oppbevaring",
             ].map((p) => (
               <li key={p} className="flex items-start gap-2">
