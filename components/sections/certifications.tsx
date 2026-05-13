@@ -11,17 +11,12 @@ export function Certifications() {
       description: "Internasjonalt anerkjent standard for helse, miljø og sikkerhet på arbeidsplassen.",
     },
     {
-      name: "IRATA",
-      subtitle: "Industrial Rope Access",
-      description: "Alle våre rope access-teknikere er sertifisert iht. IRATA-standarden – den høyeste internasjonale standarden for industriell klatring.",
-    },
-    {
       name: "SOFT",
       subtitle: "Skandinavisk Fallsikring",
       description: "Medlem av Skandinavisk organisasjon for fallsikringsteknikk – fagorganisasjonen for fallsikringsbransjen i Norden.",
     },
   ]
- 
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -31,7 +26,7 @@ export function Certifications() {
             Våre sertifiseringer garanterer at vi følger de strengeste standarder for kvalitet, sikkerhet og profesjonalitet.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {certs.map((cert) => (
             <div key={cert.name} className="bg-card border border-border rounded-xl p-6">
               <div className="text-2xl font-bold text-primary mb-1">{cert.name}</div>
@@ -44,4 +39,3 @@ export function Certifications() {
     </section>
   )
 }
- 
