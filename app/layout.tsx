@@ -16,25 +16,10 @@ export const metadata: Metadata = {
     'ABC Fallsikring AS er Norges totalleverandør av fallsikringsutstyr, sertifiserte kurs og rådgivning. Stolpekurs NS 9610, ActSafe taumoped, rope access og redningssett. Besøk abcfallsikring.no.',
   authors: [{ name: 'ABC Fallsikring AS', url: 'https://www.abcfallsikring.no' }],
   keywords: [
-    'fallsikring',
-    'fallsikringsutstyr',
-    'kurs fallsikring',
-    'arbeid i høyden',
-    'arbeid i tau',
-    'redning i høyden',
-    'stolpekurs',
-    'NS 9610',
-    'ActSafe taumoped',
-    'rope access',
-    'redningssett',
-    'Skylotec',
-    'HMS',
-    'høydesikkerhet',
-    'ABC Fallsikring',
-    'abcfallsikring.no',
-    'Tønsberg',
-    'Vestfold',
-    'Norge',
+    'fallsikring', 'fallsikringsutstyr', 'kurs fallsikring', 'arbeid i høyden',
+    'arbeid i tau', 'redning i høyden', 'stolpekurs', 'NS 9610', 'ActSafe taumoped',
+    'rope access', 'redningssett', 'Skylotec', 'HMS', 'høydesikkerhet',
+    'ABC Fallsikring', 'abcfallsikring.no', 'Tønsberg', 'Vestfold', 'Norge',
   ],
   openGraph: {
     type: 'website',
@@ -42,23 +27,15 @@ export const metadata: Metadata = {
     url: 'https://www.abcfallsikring.no',
     siteName: 'ABC Fallsikring AS',
     title: 'ABC Fallsikring AS – Utstyr, Kurs & Rådgivning for Arbeid i Høyden',
-    description:
-      'Totalleverandør av kurs, utstyr og tjenester innen fallsikring, arbeid i tau og redning i høyden. Kontakt oss i dag.',
+    description: 'Totalleverandør av kurs, utstyr og tjenester innen fallsikring, arbeid i tau og redning i høyden. Kontakt oss i dag.',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ABC Fallsikring AS – Fallsikring, Kurs & Utstyr',
-    description:
-      'Totalleverandør av kurs, utstyr og tjenester innen fallsikring og arbeid i høyden. abcfallsikring.no',
+    description: 'Totalleverandør av kurs, utstyr og tjenester innen fallsikring og arbeid i høyden. abcfallsikring.no',
   },
-  alternates: {
-    canonical: 'https://www.abcfallsikring.no',
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
-  },
+  alternates: { canonical: 'https://www.abcfallsikring.no' },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true } },
 }
 
 const jsonLd = {
@@ -72,8 +49,7 @@ const jsonLd = {
       url: 'https://www.abcfallsikring.no',
       telephone: '+4733740888',
       email: 'post@abcfallsikring.no',
-      description:
-        'Totalleverandør av kurs, utstyr og tjenester innen fallsikring, arbeid i tau og redning i høyden.',
+      description: 'Totalleverandør av kurs, utstyr og tjenester innen fallsikring, arbeid i tau og redning i høyden.',
       legalName: 'ABC Fallsikring AS',
       taxID: '922646260',
       address: {
@@ -84,11 +60,7 @@ const jsonLd = {
         addressRegion: 'Vestfold',
         addressCountry: 'NO',
       },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 59.2638,
-        longitude: 10.4029,
-      },
+      geo: { '@type': 'GeoCoordinates', latitude: 59.2638, longitude: 10.4029 },
       openingHoursSpecification: {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
@@ -102,39 +74,32 @@ const jsonLd = {
         itemListElement: [
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Stolpekurs NS 9610' } },
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Kurs i arbeid i tau' } },
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'ActSafe taumoped kurs' },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'Redningssett og beredskapsplan' },
-          },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ActSafe taumoped kurs' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Redningssett og beredskapsplan' } },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Product',
               name: 'Fallsikringsutstyr Skylotec',
               description: 'Profesjonelt fallsikringsutstyr fra Skylotec – seler, falldempere og fallbremser for arbeid i høyden.',
-              brand: {
-                '@type': 'Brand',
-                name: 'Skylotec',
-              },
+              brand: { '@type': 'Brand', name: 'Skylotec' },
               offers: {
                 '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'NOK',
+                priceSpecification: {
+                  '@type': 'PriceSpecification',
+                  price: '0',
+                  priceCurrency: 'NOK',
+                  description: 'Kontakt oss for pris',
+                },
                 availability: 'https://schema.org/InStock',
                 url: 'https://www.abcfallsikring.no/categories/fallsikring',
-                seller: {
-                  '@type': 'Organization',
-                  name: 'ABC Fallsikring AS',
-                },
+                seller: { '@type': 'Organization', name: 'ABC Fallsikring AS' },
               },
             },
           },
-          {
-            '@type': 'Offer',
-            itemOffered: { '@type': 'Service', name: 'Inspeksjon og sertifisering av utstyr' },
-          },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Inspeksjon og sertifisering av utstyr' } },
         ],
       },
       sameAs: [
