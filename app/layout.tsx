@@ -95,21 +95,7 @@ const jsonLd = {
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ActSafe taumoped kurs og salg' } },
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Redningssett og beredskapsplan' } },
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Inspeksjon og sertifisering av utstyr' } },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Product',
-              name: 'Fallsikringsutstyr Skylotec',
-              description: 'Profesjonelt fallsikringsutstyr fra Skylotec – seler, falldempere og fallbremser for arbeid i høyden.',
-              brand: { '@type': 'Brand', name: 'Skylotec' },
-              offers: {
-                '@type': 'Offer',
-                availability: 'https://schema.org/InStock',
-                url: 'https://www.abcfallsikring.no/categories/fallsikring',
-                seller: { '@type': 'Organization', name: 'ABC Fallsikring AS' },
-              },
-            },
-          },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Fallsikringsutstyr fra Skylotec' } },
         ],
       },
       sameAs: [
