@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://v0-h-ydesikkerhet.vercel.app' // Bytt ut med endelig domene
+    const baseUrl = 'https://www.fallsikringsele.no'
 
   return {
     rules: {
