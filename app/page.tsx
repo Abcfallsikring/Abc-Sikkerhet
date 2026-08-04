@@ -57,7 +57,7 @@ Se våre tjenester
 ABC Fallsikring AS tilbyr profesjonelle rope access-tjenester for industri, bygg og offshore. Rask mobilisering uten behov for stillas.
 </p>
 <ul className="flex flex-col gap-3 mb-8">
-{['IRATA Level 1, 2 og 3 sertifiserte teknikere', 'Fasadearbeid, inspeksjon og vedlikehold', 'Offshore og vindkraft', 'Rask mobilisering – ingen stillas nødvendig'].map(item => (
+{['Fasadearbeid, inspeksjon og vedlikehold', 'Offshore og vindkraft', 'Rask mobilisering – ingen stillas nødvendig'].map(item => (
 <li key={item} className="flex items-start gap-2.5 text-sm text-zinc-300">
 <CircleCheckBig className="text-orange-500 flex-shrink-0 mt-0.5" size={16} aria-hidden="true" />
 {item}
