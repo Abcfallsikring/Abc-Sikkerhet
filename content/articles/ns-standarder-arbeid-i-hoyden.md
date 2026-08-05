@@ -1,7 +1,11 @@
-# NS-standarder for arbeid i høyden – Hva betyr de og hvilke gjelder?
-
-**Kategori:** Standarder & Regelverk | **Lesetid:** 10 min | **Forfatter:** ABC Fallsikring AS
-
+---
+title: "NS-standarder for arbeid i høyden – Hva betyr de og hvilke gjelder?"
+description: "Praktisk oversikt over NS- og EN-standardene for fallsikringsutstyr: NS 9610, NS-EN 361, 362, 354/355, 360, 795, 363, 365, stiger og stillas."
+publishedAt: "2026-05-21"
+author: "ABC Fallsikring AS"
+category: "Regelverk"
+tags: ["NS-EN standarder", "NS 9610", "regelverk", "fallsikringsutstyr"]
+featured: false
 ---
 
 Norsk Standard (NS) og europeiske EN-standarder er et sentralt verktøy for å oppfylle lovkravene til arbeid i høyden. Denne artikkelen gir deg en praktisk oversikt over hvilke standarder som gjelder, hva de krever, og hva som skjer om du bruker utstyr som ikke er godkjent.
