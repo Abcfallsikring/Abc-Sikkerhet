@@ -16,6 +16,7 @@
     { "source": "/tjenester/kurs", "destination": "https://www.abcfallsikring.no/categories/kurs-og-tjenester", "statusCode": 301 },
     { "source": "/tjenester/inspeksjon", "destination": "https://www.abcfallsikring.no/categories/arlig-kontroll-og-service", "statusCode": 301 },
     { "source": "/tjenester/vedlikehold", "destination": "https://www.abcfallsikring.no/categories/arlig-kontroll-og-service", "statusCode": 301 },
+    { "source": "/tjenester/onix", "destination": "https://www.abcfallsikring.no/blog/periodisk-kontroll-av-fallsikringsutstyr-med-onix-inspect", "statusCode": 301 },
     { "source": "/tjenester/risikoanalyse", "destination": "https://www.abcfallsikring.no/blog/beste-r-dgivere-for-risikovurdering-ved-arbeid-i-h-yden-slik-velger-du-riktig", "statusCode": 301 },
 
     { "source": "/blogg/actsafe-taumoped-komplett-guide", "destination": "https://www.abcfallsikring.no/categories/actsafe", "statusCode": 301 },
